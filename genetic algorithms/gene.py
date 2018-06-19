@@ -1,4 +1,4 @@
-from fuzzywuzzy import fuzz
+from fuzzywuzzy import fuzz # install fuzzywuzy in terminal (sudo pip install fuzzywuzzy)
 import random
 import string
 let = 'qwertyuiopasdfghjklzxcvbnm'
