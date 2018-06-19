@@ -16,7 +16,7 @@ class pop:
 target = None
 target_len = None
 population = 20
-gen = 1000
+gen = 10000000000
 
 def ini_pop(population,len):
     
@@ -56,10 +56,15 @@ def cross(agents):
         parent1 = random.choice(agents)
         parent2 = random.choice(agents)
         child1 = pop(target_len)
+        child2 = pop(target_len)
+
         split = target_len//2
         child1.string = parent1.string[0:split] + parent2.string[split:target_len]
+        child1.string = parent2.string[0:split] + parent1.string[split:target_len]
+
 
         newstr.append(child1)
+        newstr.append(child2)
 
     agents.extend(newstr)
 
